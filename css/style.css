@@ -10,22 +10,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-.clearfix:after {
-	clear: both;
-}
-a {
-	text-decoration: none;
-}
-a:hover {
-	color: #000;
-}
 /* Media for Welcome page */
 @media (max-width: 560px){
 }
@@ -33,23 +17,36 @@ a:hover {
 .cbp-spmenu {
 	background: #4e8998;
 	position: fixed;
+	font-size: 0.7em;
+	text-align: center;
+	text-transform: uppercase;
 }
-.cbp-spmenu a {
+.cbp-spmenu div.nav > a {
 	display: block;
 	color: #fff;
 	width:100%;
-	font-size: 0.8em;
-	text-align: center;
 }
-.cbp-spmenu a:hover {
+.cbp-spmenu div.nav > a:hover {
 	background: #264c56;
 	color: #fff;
+	text-decoration: none;
 }
-.cbp-spmenu a:active {
+.cbp-spmenu div.nav > a:active {
 	background: #264c56;
 	color: #ffffff;
 }
-
+.cbp-spmenu input {
+	display: block;
+    margin: 0 auto;
+    background: #264c56;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    border: 1px solid #fff;
+    background-image: url('../img/search.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-origin: content-box;
+}
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
@@ -59,7 +56,7 @@ a:hover {
 	z-index: 1000;
 }
 .cbp-spmenu-vertical a {
-	padding: 0.5em;
+	padding: 0.4em;
 }
 
 /* Vertical menu that slides from the left or right */
