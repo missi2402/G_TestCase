@@ -10,17 +10,48 @@
 		<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	</head>
-	<body>
-		<header>
-		
-		</header>
-		<main>
-			
-		</main>
+	<body class="cbp-spmenu-push">
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+			<img src="img/logo.png" alt="Торгово-развлекательный центр">
+			<a href="#" class="active">Главная</a>
+			<a href="#">О комплексе</a>
+			<a href="#">Как нас найти</a>
+			<a href="#">Схема комплекса</a>
+			<a href="#">Магазины и услуги</a>
+			<a href="#">Еда и развлечения</a>
+			<a href="#">События</a>
+			<a href="#">Акции</a>
+			<a href="#">Документация</a>
+			<input type="search" placeholder="Поиск по сайту">
+			<a href="#">Аренда</a>
+			<a href="#">Контактная информация</a>
+		</nav>
+		<div class="container">
+			<div class="main">
+				<section class="buttonset">
+					<button id="showLeftPush">Show/Hide Left Push Menu</button>
+				</section>
+			</div>
+		</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/tether.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/modernizr.custom.js"></script>
+	<script>
+		var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+			showLeftPush = document.getElementById( 'showLeftPush' ),
+			body = document.body;
+
+		showLeftPush.onclick = function() {
+			classie.toggle( this, 'active' );
+			classie.toggle( body, 'cbp-spmenu-push-toright' );
+			classie.toggle( menuLeft, 'cbp-spmenu-open' );
+			disableOther( 'showLeftPush' );
+		};
+		if( button !== 'showLeftPush' ) {
+			classie.toggle( showLeftPush, 'disabled' );
+			}
+	</script>
 	</body>
 </html>
