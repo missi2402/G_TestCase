@@ -10,9 +10,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-/* Media for Welcome page */
-@media (max-width: 560px){
-}
 /* General styles for all menus */
 .cbp-spmenu {
 	background: #4e8998;
@@ -84,6 +81,20 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+	background-color: #fff !important;
+}
+.hamburger {
+	position: fixed;
+    padding: 25px !important;
+}
+.cbp-spmenu {
+    position: absolute !important;
+}
+.cbp-spmenu-left.cbp-spmenu-open {
+    left: -270px !important;
+    height: 150% !important;
+}
 main{
 	height: 700px;
 	background-image: url('../img/background.png');
@@ -97,6 +108,24 @@ main{
 #peopleImg{
 	max-width: 100%;
 	vertical-align: bottom;
+}
+ul.menuItem li{
+	display: inline-block;
+    position: relative;
+    top: -10px;
+    padding-top: 50px;    
+	text-align: center;
+	padding: 0 0.5em;
+}
+ul.menuItem li:not(:last-of-type){
+    border-right: 1px white solid;	
+}
+ul.menuItem li > a, ul.menuItem li > a:hover{
+	color: white;
+}
+ul.menuItem li a > img {
+	padding-top: 100px;
+	padding-bottom: 20px;
 }
 .carousel-inner div > img{
 	margin: 0 auto;
