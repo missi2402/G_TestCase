@@ -48,7 +48,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
     background-origin: content-box;
 }
 /* Orientation-dependent styles for the content of the menu */
-
 .cbp-spmenu-vertical {
 	width: 270px;
 	height: 100%;
@@ -85,7 +84,31 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-
+main{
+	height: 700px;
+	background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.carousel-inner div > img{
+	margin: 0 auto;
+}
+.carousel-control {
+	top: initial !important;
+	opacity: 1 !important;
+	background: none !important;
+}
+.carousel-indicators {
+    bottom: -50px !important;
+}
+.carousel-indicators li {
+    width: 20px !important;
+    height: 20px !important;
+}
 /* Example media queries */
 @media screen and (max-width: 55.1875em){
 	.cbp-spmenu-horizontal {
