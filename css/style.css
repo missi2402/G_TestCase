@@ -94,6 +94,10 @@ main{
    padding: 0 !important;
    margin: 0 !important;
 }
+#peopleImg{
+	max-width: 100%;
+	vertical-align: bottom;
+}
 .carousel-inner div > img{
 	margin: 0 auto;
 }
@@ -108,6 +112,16 @@ main{
 .carousel-indicators li {
     width: 20px !important;
     height: 20px !important;
+}
+.carousel-caption{
+	position: inherit !important;
+}
+.advantages{
+	margin-top: 70px;
+	margin-left: 45px;
+} 
+.advantages p{
+	margin-bottom: 0 !important;
 }
 /* Example media queries */
 @media screen and (max-width: 55.1875em){

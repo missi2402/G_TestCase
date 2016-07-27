@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="author" content="Antoniuk">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/hamburgers.min.css" rel="stylesheet">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -53,8 +54,12 @@
 			<div class="container nopadding">
 				<div class="row">
 					<div class="col-lg-6 col-md-6">
-						<button id="showLeftPush">Show/Hide Left Push Menu</button>
-						<img src="img/people.png" alt="Октябрский Торгово-развлекательный центр">
+						<div id="showLeftPush" class="hamburger hamburger--arrowalt" >
+						    <div class="hamburger-box">
+						    	<div class="hamburger-inner"></div>
+						    </div>
+						</div>
+						<img src="img/people.png" id="peopleImg" alt="Октябрский Торгово-развлекательный центр">
 					</div>
 					<div id="carousel-example-generic" class="carousel slide col-lg-6 col-md-6" data-ride="carousel">
 						<ol class="carousel-indicators">
@@ -97,6 +102,20 @@
 						</a>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 advantages">
+						<h1>НАШИ ПРЕИМУЩЕСТВА</h1>
+						<p>Расположен в спально-административном районе города. Выгодно расположен относительно центральных магистралей.<br />
+						К ТЦ ведут удобные транспортные развязки, удобные подъездные пути для личного автотранспорта. В непосредственной близости от Торгового Центра имеются остановки городского транспорта <br />
+						<ul>
+							<li>Автобусы - 10 маршрутов,</li>
+							<li>Троллейбусы - 7 маршрутов, </li>
+							<li>Маршрутки - 15 маршрутов. </li>
+							<li>Оборудована парковка на 400 машиномест. В непосредственной близости располагается магазин "Перекрёсток".</li>
+						</ul>
+						</p>
+					</div>
+				</div>
 			</div>
 		</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -117,7 +136,30 @@
 		};
 		if( button !== 'showLeftPush' ) {
 			classie.toggle( showLeftPush, 'disabled' );
-			}
+		}
 	</script>
+	<script>
+	/**
+	* forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+	*
+	* @private
+	* @author Todd Motto
+	* @link https://github.com/toddmotto/foreach
+	* @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+	* @callback requestCallback      callback   - Callback function for each iteration.
+	* @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+	* @returns {}
+	*/
+    var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+      forEach(hamburgers, function(hamburger) {
+        hamburger.addEventListener("click", function() {
+          this.classList.toggle("is-active");
+        }, false);
+      });
+    }
+  </script>
 	</body>
 </html>
