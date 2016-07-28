@@ -18,6 +18,9 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	text-align: center;
 	text-transform: uppercase;
 }
+.cbp-spmenu a:first-of-type > img{
+	padding: 2.5em 0;
+}
 .cbp-spmenu div.nav > a {
 	display: block;
 	color: #fff;
@@ -34,15 +37,35 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 }
 .cbp-spmenu input {
 	display: block;
-    margin: 0 auto;
+    margin: 2em auto;
     background: #264c56;
     text-transform: uppercase;
-    padding: 5px 30px;
+    padding: 5px 20px 5px 5px;
+    width: 80%;
     border: 1px solid #fff;
     background-image: url('../img/search.png');
     background-repeat: no-repeat;
     background-position: center right;
     background-origin: content-box;
+}
+.contacts, .contacts a, .contacts a:hover{
+	color: #b3d1d4;
+}
+.shedule img{
+	padding-top: 5px;
+}
+.shedule img, .shedule p{
+	margin-bottom: 15px;
+	font-size: 1.3em;
+	color: #b3d1d4;
+}
+.shedule p:nth-of-type(2){
+	text-decoration: underline;
+	font-size: 1.7em;
+}
+.shedule p:last-of-type{
+	font-size: 2em;
+	font-weight:bold;
 }
 /* Orientation-dependent styles for the content of the menu */
 .cbp-spmenu-vertical {
@@ -52,20 +75,16 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 	z-index: 1000;
 }
 .cbp-spmenu-vertical a {
-	padding: 0.4em;
+	padding: 1em;
 }
-
 /* Vertical menu that slides from the left or right */
-
 .cbp-spmenu-left {
 	left: -270px;
 }
 .cbp-spmenu-left.cbp-spmenu-open {
 	left: 0px;
 }
-
 /* Push classes applied to the body */
-
 .cbp-spmenu-push {
 	overflow-x: hidden;
 	position: relative;
@@ -93,21 +112,23 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 }
 .cbp-spmenu-left.cbp-spmenu-open {
     left: -270px !important;
-    height: 150% !important;
+    height: 100% !important;
 }
 main{
-	height: 700px;
 	background-image: url('../img/background.png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top;
+    background-size: cover;
 }
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
 }
 #peopleImg{
-	max-width: 100%;
-	vertical-align: bottom;
+	width: 125%;
+    padding-top: 16%;
+    position: relative;
+    left: -60px;
 }
 ul.menuItem li{
 	display: inline-block;
@@ -116,6 +137,7 @@ ul.menuItem li{
     padding-top: 50px;    
 	text-align: center;
 	padding: 0 0.5em;
+	margin-bottom: 2rem;
 }
 ul.menuItem li:not(:last-of-type){
     border-right: 1px white solid;	
@@ -134,23 +156,39 @@ ul.menuItem li a > img {
 	top: initial !important;
 	opacity: 1 !important;
 	background: none !important;
+	bottom: 200px !important;
+    width: 55% !important;
 }
 .carousel-indicators {
-    bottom: -50px !important;
+    bottom: 200px !important;
+    left: 60% !important;
+    width: 30% !important;
+    margin-left: -25% !important;
 }
 .carousel-indicators li {
     width: 20px !important;
     height: 20px !important;
 }
 .carousel-caption{
-	position: inherit !important;
+	max-width: 90% !important;
+    margin: 0 auto !important;
 }
 .advantages{
 	margin-top: 70px;
 	margin-left: 45px;
+	background: #ffffff;
 } 
 .advantages p{
 	margin-bottom: 0 !important;
+}
+.advantages h2{
+	font-weight: bold;
+}
+.advantages span{
+	position: absolute;
+    right: 0;
+    bottom: 0px;
+    margin: 15px 0px 15px 15px;
 }
 /* Example media queries */
 @media screen and (max-width: 55.1875em){
@@ -164,7 +202,6 @@ ul.menuItem li a > img {
 	.cbp-spmenu-bottom {
 		bottom: -110px;
 	}
-
 }
 /*@media screen and (max-height: 26.375em){
 	.cbp-spmenu-vertical {
